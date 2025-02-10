@@ -19,15 +19,17 @@ TOOLS
 const km = prompt('Quanti km vuoi percorrere?')
 const età = prompt('Quanti anni hai?')
 const costoKm = (0.21 * km)
+const costoKmRounded = costoKm.toFixed(2)
 
-console.log(costoKm);
+console.log(costoKmRounded);
 
 if (età <= 18) {
-    alert('Il tuo biglietto costa € ' + (costoKm - (costoKm * 0.2)));
+    alert('Il tuo biglietto costa € ' + (costoKmRounded - (costoKmRounded * 0.2)));
 } else if (età >= 65) {
-    alert('Il tuo biglietto costa € ' + (costoKm - (costoKm * 0.4)));
+    alert('Il tuo biglietto costa € ' + (costoKmRounded - (costoKmRounded * 0.4)));
 } else {
-    alert('Il tuo biglietto costa € ' + costoKm);
+    alert('Il tuo biglietto costa € ' + costoKmRounded);
 }
+
 
 
